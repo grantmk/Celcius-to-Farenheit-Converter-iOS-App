@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tempconverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter temperature in Celcius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mK-eL-ATA">
+                                <rect key="frame" x="49" y="51" width="272" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-aL-n9c">
+                                <rect key="frame" x="146" y="129" width="97" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.9470248056767876" blue="0.0" alpha="0.23819813829787234" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="f5q-Hc-p5T"/>
+                                    <constraint firstAttribute="width" constant="97" id="jxj-Vx-rJ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-Pp-zY5">
+                                <rect key="frame" x="187" y="236" width="49" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e97-HN-ZJ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qnJ-aL-n9c" firstAttribute="top" secondItem="8mK-eL-ATA" secondAttribute="bottom" constant="45" id="MSb-pj-XoY"/>
+                            <constraint firstItem="8mK-eL-ATA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="mzx-FP-zgg"/>
+                            <constraint firstItem="8mK-eL-ATA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="phw-RA-7Ym"/>
+                            <constraint firstItem="GFT-Pp-zY5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rfF-zR-bWR"/>
+                            <constraint firstItem="GFT-Pp-zY5" firstAttribute="top" secondItem="qnJ-aL-n9c" secondAttribute="bottom" constant="20" id="vPT-sM-xMw"/>
+                            <constraint firstItem="qnJ-aL-n9c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zba-c6-uNd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tempEntry" destination="qnJ-aL-n9c" id="pxh-fe-Qnf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
